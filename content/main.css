@@ -1,0 +1,22 @@
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+#table{
+    width: 70vw;
+}
+/* 
+.table-item{
+    border: 1px solid black;
+}
+
+.content-item{
+    margin-left: 3px;
+    border: 1px solid black;
+} */

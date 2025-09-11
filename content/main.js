@@ -1,0 +1,31 @@
+function createAddElement(parent, childId, childClass, childTextContent, childDisplayStyle){
+    const child = document.createElement('td'); 
+    child.id = childId;
+    child.className = childClass;
+    child.textContent=childTextContent;
+    if(childDisplayStyle !== null){
+        child.style.display = childDisplayStyle;
+    }
+    parent.appendChild(child);
+    return child;
+}
+
+const table = document.getElementById('table')
+function createTable(age){
+    for (let i=2025; i>=1867; i--, age--){
+        const tableContent = document.createElement('tr');
+        tableContent.className = 'table-item';
+        createAddElement(tableContent, `test${i}`, 'content-item', i, null);
+        createAddElement(tableContent, `test${i}_2`, 'content-item', age, null);
+        table.appendChild(tableContent);
+    }
+}
+
+const input = document.getElementById('age')
+const btn = document.getElementById('submit-btn');
+
+btn.addEventListener('click', ()=>{
+    createTable(input.value);
+})
+
+

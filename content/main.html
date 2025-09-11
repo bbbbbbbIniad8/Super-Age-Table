@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    
+    <h1>年齢早見表</h1>
+    <div id="input">
+        <input id="age" type="number" min="0" max="120" step="1" value="20">
+        <button id="submit-btn">測定</button>
+    </div>
+    <table id="table"  border="1" style="border-collapse: collapse">
+        <tr>
+            <th>西暦</th><th>年齢</th>
+        </tr>
+
+    </table>
+    <script src="main.js"></script>
 </body>
 </html>
