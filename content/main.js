@@ -1,3 +1,7 @@
+const table = document.getElementById('table')
+const input = document.getElementById('age')
+const btn = document.getElementById('submit-btn');
+
 function createAddElement(parent, childId, childClass, childTextContent, childDisplayStyle){
     const child = document.createElement('td'); 
     child.id = childId;
@@ -10,7 +14,6 @@ function createAddElement(parent, childId, childClass, childTextContent, childDi
     return child;
 }
 
-const table = document.getElementById('table')
 function createTable(age){
     for (let i=2025; i>=1867; i--, age--){
         const tableContent = document.createElement('tr');
@@ -21,10 +24,16 @@ function createTable(age){
     }
 }
 
-const input = document.getElementById('age')
-const btn = document.getElementById('submit-btn');
+function resetTable(){
+    const targetElements = document.querySelectorAll('.table-item');
+    targetElements.forEach(element => {
+        element.replaceChildren();
+    });
+}
+
 
 btn.addEventListener('click', ()=>{
+    resetTable()
     createTable(input.value);
 })
 
