@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>スーパー年齢早見表</h1>
+    <p>※現在は開発のために、AIに作成させた仮の年表データを使用しています。そのため、現時点では、年表の出来事の正確性を保証しません。</p>
     <div id="input">
         <p>年齢を入力</p>
         <input id="age" type="number" min="0" max="120" step="1" value="20">
@@ -15,10 +16,11 @@
     </div>
     <table id="table"  border="1" style="border-collapse: collapse">
         <tr>
-            <th>西暦</th><th>年齢</th>
+            <th>西暦</th><th>年齢</th><th>流行したもの</th><th>その年の代表的な作品</th>
         </tr>
 
     </table>
+    <script src="data.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

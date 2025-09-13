@@ -20,6 +20,17 @@ function createTable(age){
         tableContent.className = 'table-item';
         createAddElement(tableContent, `test${i}`, 'content-item', i, null);
         createAddElement(tableContent, `test${i}_2`, 'content-item', age, null);
+        if (data[i]){
+            createAddElement(tableContent, `test${i}_3`, 'content-item', data[i], null);
+        } else {
+            createAddElement(tableContent, `test${i}_3`, 'content-item', "", null);
+        }
+
+        if (caludata[i]){
+            createAddElement(tableContent, `test${i}_3`, 'content-item', caludata[i], null);
+        } else {
+            createAddElement(tableContent, `test${i}_3`, 'content-item', "", null);
+        }
         table.appendChild(tableContent);
     }
 }
