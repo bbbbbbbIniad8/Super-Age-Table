@@ -1,6 +1,8 @@
-const table = document.getElementById('table')
-const input = document.getElementById('age')
+const table = document.getElementById('table');
+const input = document.getElementById('age');
+const year = document.getElementById('year');
 const btn = document.getElementById('submit-btn');
+const nowYear = 2025;
 
 function createAddElement(parent, childId, childClass, childTextContent, childDisplayStyle){
     const child = document.createElement('td'); 
@@ -48,4 +50,10 @@ btn.addEventListener('click', ()=>{
     createTable(input.value);
 })
 
+year.addEventListener('change', (event)=>{
+    input.value = nowYear - event.target.value;
+})
 
+input.addEventListener('change', (event)=>{
+    year.value = nowYear - event.target.value;
+})
